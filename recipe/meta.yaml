@@ -1,5 +1,5 @@
 {% set name = "qe-tools" %}
-{% set version = "2.0.0rc2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qe-tools-{{ version }}.tar.gz
-  sha256: f274ae0ddbe52da3bd0d52c0fe5c95dcaa80c68f92e2dba2ebed45e463a92da1
+  sha256: 2b7dc5aa7ec64956476ff768c6faaf33d48d6db2e1fdbfaf16497ec1b8dd1da0
 
 build:
   noarch: python
@@ -16,6 +16,7 @@ build:
 
 requirements:
   host:
+    - flit >=3.4,<4
     - pip
     - python >=3.6
   run:
@@ -36,7 +37,7 @@ about:
   home: https://github.com/aiidateam/qe-tools
   summary: A set of useful tools to manage Quantum ESPRESSO files
   license: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
 
 extra:
   recipe-maintainers:
