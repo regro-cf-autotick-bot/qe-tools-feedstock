@@ -1,11 +1,11 @@
-About qe-tools
-==============
+About qe-tools-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qe-tools-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/aiidateam/qe-tools
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qe-tools-feedstock/blob/main/LICENSE.txt)
 
 Summary: A set of useful tools to manage Quantum ESPRESSO files
 
