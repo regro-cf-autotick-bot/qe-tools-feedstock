@@ -1,13 +1,13 @@
 {% set name = "qe-tools" %}
-{% set version = "2.0.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qe-tools-{{ version }}.tar.gz
-  sha256: 2b7dc5aa7ec64956476ff768c6faaf33d48d6db2e1fdbfaf16497ec1b8dd1da0
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 289239e981f84bcf2f94b9a4716dd2e59fa68630404311ed2774e4b51b4ca80f
 
 build:
   noarch: python
