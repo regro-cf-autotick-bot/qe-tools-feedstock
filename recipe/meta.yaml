@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qe-tools-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/qe-tools-{{ version }}.tar.gz
   sha256: 2b7dc5aa7ec64956476ff768c6faaf33d48d6db2e1fdbfaf16497ec1b8dd1da0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - flit >=3.4,<4
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - numpy
     - packaging
-    - python >=3.6
+    - python >={{ python_min }}
     - scipy
 
 test:
@@ -32,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/aiidateam/qe-tools
